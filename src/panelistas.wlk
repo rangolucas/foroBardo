@@ -97,4 +97,9 @@ object lizzyTagliani {
 	method humor(){
 		return humor
 	}
+	
+	method humor(unValor){
+		humor = unValor
+	}
+	
 }
