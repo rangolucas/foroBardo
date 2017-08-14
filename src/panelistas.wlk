@@ -89,4 +89,8 @@ object lizzyTagliani {
 	method estaDeMalhumor() {
 		return humor < 0
 	}
+	
+	method humor(){
+		return humor
+	}
 }
