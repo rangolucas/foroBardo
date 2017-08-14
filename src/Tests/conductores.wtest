@@ -1,11 +1,16 @@
 import panelistas.*
 import conductores.*
 
-	describe "fantino" {
+	describe "conductores" {
 		
 		test "fantino hace opinar de deporte a toti" {
 			fantino.hacerOpinarDeDeportesA(totiPasman)
 			assert.equals(0, totiPasman.soberbia())
 			assert.notThat(totiPasman.tieneSed())
+		}
+
+		test "polino hace opinar de chimentos a lizy" {
+			polino.hacerOpinarDeChimentosA(lizzyTagliani)
+			assert.equals(20, lizzyTagliani.humor())
 		}
 	}
