@@ -1,0 +1,47 @@
+import panelistas.*
+
+describe "panelistas" {
+	
+	test "pagani eleva voz" {
+		horacioPagani.elevarVoz()
+		assert.equals(20, horacioPagani.nivelDeEnojo())
+	}
+	
+	test "pagani toma agua" {
+		horacioPagani.tomarAgua()
+		assert.equals(9, horacioPagani.nivelDeEnojo())
+	}
+	
+	test "pagani se calma" {
+		horacioPagani.calmarse(150)
+		assert.equals(0, horacioPagani.nivelDeEnojo())
+	}
+	
+	test "toti eleva voz" {
+		totiPasman.elevarVoz()
+		assert.equals(20, totiPasman.soberbia())
+		assert.that(totiPasman.tieneSed())
+	}
+	
+	test "toti toma agua" {
+		totiPasman.tomarAgua()
+		assert.notThat(totiPasman.tieneSed())
+	}
+	
+	test "toti se calma" {
+		totiPasman.calmarse(3)
+		assert.equals(4, totiPasman.soberbia())
+	}
+	
+	test "lizy toma agua" {
+		lizzyTagliani.tomarAgua()
+		assert.equals(20, lizzyTagliani.humor())
+	}
+	
+	test "lizy se calma" {
+		lizzyTagliani.humor(-5)
+		lizzyTagliani.calmarse(3)
+		assert.equals(1, lizzyTagliani.humor())
+	}
+
+}
